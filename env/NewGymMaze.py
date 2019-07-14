@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jul  6 15:45:56 2019
-
-@author: harshapodapati
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -14,9 +6,9 @@ class TestWorld(object):
         self.grid = np.zeros((m,n))
         self.m = m
         self.n = n
-        self.State_Space = [i for i in range(self.m*self.n)]
-        self.State_Space.remove(self.m*self.n-1)
-        self.State_Space_Plus = [ i for i in range(self.m*self.n)]
+        self.observation1_space = [i for i in range(self.m*self.n)]
+        self.observation1_space.remove(self.m*self.n-1)
+        self.observation_space = [ i for i in range(self.m*self.n)]
         
         self.action_space = {'U' : -self.n, 'D' : self.n, 
                             'L' : -1, 'R' : 1}
@@ -45,7 +37,7 @@ class TestWorld(object):
         self.grid[x][y] = 2
     
     def offGridMove(self, newState, oldState):
-        if newState not in self.State_Space_Plus:
+        if newState not in self.observation_space:
             return True
         elif oldState % self.m == 0 and newState % self.m == self.m -1:
             return True
@@ -55,7 +47,7 @@ class TestWorld(object):
             return False            
         
     def isTerminalState(self, state):
-        return state in self.State_Space_Plus and state not in self.State_Space
+        return state in self.observation_space and state not in self.observation1_space
     
     def actionSpaceSample(self):
         return np.random.choice(self.possibleActions)
