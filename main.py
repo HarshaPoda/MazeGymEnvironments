@@ -6,7 +6,7 @@ from stable_baselines.common.policies import MlpPolicy
 from stable_baselines.common.vec_env import DummyVecEnv
 from stable_baselines import PPO2
 
-from env.StockTradingEnv import StockTradingEnv
+from env.NewGymMaze import NewGymMaze
 
 import pandas as pd
 walls = {2, 5, 12, 13}
