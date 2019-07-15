@@ -9,7 +9,7 @@ class MazeWorld(gym.Env):
     def __init__(self, m, n):
         super(MazeWorld, self).__init__()
         self.walls = {2,4,8,10}
-	self.grid = np.zeros(m,n)
+        self.grid = np.zeros(m,n)
         self.m = m
         self.n = n
         self.action_spaces = spaces.Discrete(4)
