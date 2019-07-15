@@ -37,7 +37,7 @@ class newMaze(gym.Env):
             done=True
         else:
             done=False
-        return self.agentPosition,reward, done, 'None'
+        return self.agentPosition,reward, done, {}
     
     def reset(self):
         self.agentPosition = 0
