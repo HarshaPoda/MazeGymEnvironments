@@ -7,7 +7,7 @@ class MazeWorld(gym.Env):
     metadata = { 'render.modes': ['human'] }
     
     def __init__(self, m, n, walls):
-        super(MazeWorld, self).init__()
+        super(MazeWorld, self).__init__()
         self.grid = np.zeros((m,n))
         self.m = m
         self.n = n
