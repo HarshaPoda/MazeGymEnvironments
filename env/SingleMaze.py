@@ -19,7 +19,7 @@ class newMaze(gym.Env):
         
     def step(self, action):
         
-        if action == 0 and (agentPosition==0):
+        if action == 0 and (self.agentPosition==0):
             self.agentPosition = self.agentPosition
             reward = -2      
         elif action == 0:
