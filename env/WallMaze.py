@@ -22,12 +22,12 @@ class MazeWorld(gym.Env):
         self.walls = walls
         i = 0
         for i in walls:
-            x = (walls / self.n)
-            y = walls % self.n
+            x = i // self.n
+            y = i  % self.n
             self.grid[x][y] = 1
     
     def getAgentRowAndColumn(self):
-       x = (self.agentPosition / self.n)
+       x = self.agentPosition // self.n
        y = self.agentPosition % self.n
        return x,y
    
