@@ -1,6 +1,4 @@
 import numpy as np
-import pandas as pd
-import maplotlib.pyplot as plt
 import gym
 from gym import error, spaces, utils
 
