@@ -12,8 +12,8 @@ import pandas as pd
 walls = {2, 5, 12, 13}
 #env = DummyVecEnv([lambda: TestWorld(3,5,walls)])
 env = DummyVecEnv([lambda: newMaze(5)])
-model = PPO2(MlpPolicy, env, verbose=1)
-model.learn(total_timesteps=20000)
+model = PPO2(MlpPolicy, env, verbose=1).learn(total_timesteps=20000)
+#model.learn(total_timesteps=20000)
 
 obs = env.reset()
 for i in range(2000):
