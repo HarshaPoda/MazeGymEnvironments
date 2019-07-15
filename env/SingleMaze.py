@@ -9,7 +9,7 @@ class newMaze(gym.Env):
     metadata = {'render.modes': ['human']}
     
     def __init__(self, m):
-        super(NewMaze, self).__init__()
+        super(newMaze, self).__init__()
         self.m = m
         self.action_space = spaces.Discrete(2)
         self.observation_space = spaces.Discrete(5)
