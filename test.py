@@ -9,7 +9,8 @@ from stable_baselines import PPO2
 from env.WallMaze import MazeWorld
 
 import pandas as pd
-walls = {2, 4, 8, 10}
+#walls = {2, 4, 8, 10}
+walls = [2,4,8,10]
 #env = DummyVecEnv([lambda: TestWorld(3,5,walls)])
 #env = DummyVecEnv([lambda: newMaze(5)])
 env = DummyVecEnv( [lambda: MazeWorld(3,4, walls)])
