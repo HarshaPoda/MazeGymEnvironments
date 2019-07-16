@@ -79,7 +79,7 @@ class MazeWorld(gym.Env):
         elif action == 3:
             tempState = self.agentPosition + 1
       
-        if tempState in walls:
+        if tempState in self.walls:
             reward = -2
             #return self.agentPosition , reward, self.isTerminalState(), {}
         elif tempState == self.terminalState:
