@@ -12,9 +12,9 @@ class MazeWorld(gym.Env):
         self.grid = np.zeros((m,4))
         self.m = m
         self.n = 4
-        self.action_spaces = spaces.Discrete(4)
-        #self.observation_spaces = spaces.Box(low = 0, high=1, shape = (3,4) )
-        self.observation_spaces = spaces.Discrete(4)
+        self.action_space = spaces.Discrete(4)
+        self.observation_spaces = spaces.Box(low = 0, high=1, shape = (3,4) )
+        #self.observation_space = spaces.Discrete(4)
         self.agentPosition = 0
         self.addWalls(self.walls)
         self.terminalState = (self.m * self.n) - 1
