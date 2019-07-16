@@ -64,7 +64,7 @@ class MazeWorld(gym.Env):
         self.grid[x][y] = 0
         self.agentPosition = tempState
         x, y = self.getAgentRowAndColumn()
-        self.grid[x][y] = 2        
+        #self.grid[x][y] = 2        
         
     def step(self, action):
         
