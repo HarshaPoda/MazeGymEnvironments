@@ -6,12 +6,12 @@ class MazeWorld(gym.Env):
     """ A maze with walls """
     metadata = { 'render.modes': ['human'] }
     
-    def __init__(self, m, n):
+    def __init__(self, m):
         super(MazeWorld, self).__init__()
         self.walls = {2,4,8,10}
         self.grid = np.zeros((m,n))
         self.m = m
-        self.n = n
+        self.n = 4
         self.action_spaces = spaces.Discrete(4)
         self.observation_spaces = spaces.Box(low = 0, high=1, shape=(12,))
         self.agentPosition = 0
